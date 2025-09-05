@@ -1,0 +1,16 @@
+/.idea
+/.qodo
+/.vscode
+/bin
+/obj
+
+./logs
+
+.env
+*.user
+*.suo
+*.DS_Store
+*.swp
+*.bak
+*.tmp
+*.log

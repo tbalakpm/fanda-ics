@@ -1,0 +1,182 @@
+2025-09-05 14:30:52.758 +05:30 [FTL] Application terminated unexpectedly
+System.InvalidOperationException: Unable to find the required services. Please add all the required services by calling 'IServiceCollection.AddAuthorization' in the application startup code.
+   at Microsoft.AspNetCore.Builder.AuthorizationAppBuilderExtensions.VerifyServicesRegistered(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Builder.AuthorizationAppBuilderExtensions.UseAuthorization(IApplicationBuilder app)
+   at Program.<Main>$(String[] args) in /Users/tbalamurugan/Projects/fanda-org/fanda-ics/src/Fanda.ICS.Api/Program.cs:line 72
+2025-09-05 14:31:11.508 +05:30 [FTL] Application terminated unexpectedly
+System.InvalidOperationException: Unable to find the required services. Please add all the required services by calling 'IServiceCollection.AddAuthorization' in the application startup code.
+   at Microsoft.AspNetCore.Builder.AuthorizationAppBuilderExtensions.VerifyServicesRegistered(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Builder.AuthorizationAppBuilderExtensions.UseAuthorization(IApplicationBuilder app)
+   at Program.<Main>$(String[] args) in /Users/tbalamurugan/Projects/fanda-org/fanda-ics/src/Fanda.ICS.Api/Program.cs:line 72
+2025-09-05 14:32:22.663 +05:30 [INF] Application is shutting down...
+2025-09-05 14:32:24.613 +05:30 [INF] User profile is available. Using '/Users/tbalamurugan/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-09-05 14:32:24.656 +05:30 [INF] Now listening on: http://localhost:5100
+2025-09-05 14:32:24.657 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-05 14:32:24.657 +05:30 [INF] Hosting environment: Development
+2025-09-05 14:32:24.657 +05:30 [INF] Content root path: /Users/tbalamurugan/Projects/fanda-org/fanda-ics/src/Fanda.ICS.Api
+2025-09-05 14:32:33.019 +05:30 [INF] Application is shutting down...
+2025-09-05 14:32:39.398 +05:30 [INF] User profile is available. Using '/Users/tbalamurugan/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-09-05 14:32:39.446 +05:30 [INF] Now listening on: http://localhost:5100
+2025-09-05 14:32:39.447 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-05 14:32:39.447 +05:30 [INF] Hosting environment: Development
+2025-09-05 14:32:39.447 +05:30 [INF] Content root path: /Users/tbalamurugan/Projects/fanda-org/fanda-ics/src/Fanda.ICS.Api
+2025-09-05 14:46:07.086 +05:30 [INF] Application is shutting down...
+2025-09-05 14:46:11.907 +05:30 [INF] User profile is available. Using '/Users/tbalamurugan/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-09-05 14:46:11.958 +05:30 [INF] Now listening on: http://localhost:5100
+2025-09-05 14:46:11.959 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-05 14:46:11.959 +05:30 [INF] Hosting environment: Development
+2025-09-05 14:46:11.959 +05:30 [INF] Content root path: /Users/tbalamurugan/Projects/fanda-org/fanda-ics/src/Fanda.ICS.Api
+2025-09-05 14:46:32.454 +05:30 [INF] Application is shutting down...
+2025-09-05 15:29:41.776 +05:30 [INF] User profile is available. Using '/Users/tbalamurugan/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-09-05 15:29:41.833 +05:30 [INF] Now listening on: http://localhost:5100
+2025-09-05 15:29:41.834 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-05 15:29:41.834 +05:30 [INF] Hosting environment: Development
+2025-09-05 15:29:41.834 +05:30 [INF] Content root path: /Users/tbalamurugan/Projects/fanda-org/fanda-ics/src/Fanda.ICS.Api
+2025-09-05 15:29:57.108 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/scalar - null null
+2025-09-05 15:29:57.207 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-09-05 15:29:57.231 +05:30 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2025-09-05 15:29:57.233 +05:30 [INF] Executing RedirectResult, redirecting to scalar/.
+2025-09-05 15:29:57.233 +05:30 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2025-09-05 15:29:57.234 +05:30 [INF] HTTP GET /scalar responded 302 in 24.7445 ms
+2025-09-05 15:29:57.241 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/scalar - 302 0 null 134.4193ms
+2025-09-05 15:29:57.245 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/scalar/ - null null
+2025-09-05 15:29:57.247 +05:30 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2025-09-05 15:29:57.290 +05:30 [INF] Write content with HTTP Response ContentType of text/html
+2025-09-05 15:29:57.293 +05:30 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2025-09-05 15:29:57.293 +05:30 [INF] HTTP GET /scalar/ responded 200 in 46.6620 ms
+2025-09-05 15:29:57.293 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/scalar/ - 200 null text/html 48.587ms
+2025-09-05 15:29:57.308 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-05 15:29:57.308 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/scalar/scalar.js - null null
+2025-09-05 15:29:57.309 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/scalar/scalar.aspnetcore.js - null null
+2025-09-05 15:29:57.310 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/_framework/aspnetcore-browser-refresh.js - 200 16091 application/javascript; charset=utf-8 1.6741ms
+2025-09-05 15:29:57.310 +05:30 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2025-09-05 15:29:57.310 +05:30 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2025-09-05 15:29:57.315 +05:30 [INF] Setting HTTP status code 304.
+2025-09-05 15:29:57.315 +05:30 [INF] Setting HTTP status code 304.
+2025-09-05 15:29:57.315 +05:30 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2025-09-05 15:29:57.315 +05:30 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2025-09-05 15:29:57.315 +05:30 [INF] HTTP GET /scalar/scalar.js responded 304 in 6.6358 ms
+2025-09-05 15:29:57.315 +05:30 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 304 in 6.3693 ms
+2025-09-05 15:29:57.316 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/scalar/scalar.js - 304 null null 7.1603ms
+2025-09-05 15:29:57.316 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/scalar/scalar.aspnetcore.js - 304 null null 6.8366ms
+2025-09-05 15:29:58.369 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/openapi/v1.json - null null
+2025-09-05 15:29:58.372 +05:30 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2025-09-05 15:29:58.394 +05:30 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-09-05 15:29:58.453 +05:30 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2025-09-05 15:29:58.453 +05:30 [INF] HTTP GET /openapi/v1.json responded 200 in 82.0468 ms
+2025-09-05 15:29:58.454 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/openapi/v1.json - 200 null application/json;charset=utf-8 84.1724ms
+2025-09-05 15:29:58.454 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/openapi/v1.json - null null
+2025-09-05 15:29:58.454 +05:30 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2025-09-05 15:29:58.455 +05:30 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2025-09-05 15:29:58.455 +05:30 [INF] HTTP GET /openapi/v1.json responded 200 in 1.3973 ms
+2025-09-05 15:29:58.456 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/openapi/v1.json - 200 null application/json;charset=utf-8 1.8479ms
+2025-09-05 15:30:05.902 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/users - null null
+2025-09-05 15:30:05.905 +05:30 [INF] Executing endpoint 'HTTP: GET /api/users/'
+2025-09-05 15:30:06.144 +05:30 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-09-05 15:30:06.386 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u.id, u.created_at, u.email, u.first_name, u.is_active, u.last_name, u.password_hash, u.password_salt, u.phone, u.profile_picture_url, u.role, u.updated_at, u.username
+FROM users AS u
+2025-09-05 15:30:06.434 +05:30 [INF] Setting HTTP status code 200.
+2025-09-05 15:30:06.434 +05:30 [INF] Writing value of type 'List`1' as Json.
+2025-09-05 15:30:06.438 +05:30 [INF] Executed endpoint 'HTTP: GET /api/users/'
+2025-09-05 15:30:06.438 +05:30 [INF] HTTP GET /api/users responded 200 in 533.6659 ms
+2025-09-05 15:30:06.441 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/users - 200 null application/json; charset=utf-8 539.1755ms
+2025-09-05 15:30:22.345 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/users - null null
+2025-09-05 15:30:22.354 +05:30 [INF] Executing endpoint 'HTTP: GET /api/users/'
+2025-09-05 15:30:22.381 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u.id, u.created_at, u.email, u.first_name, u.is_active, u.last_name, u.password_hash, u.password_salt, u.phone, u.profile_picture_url, u.role, u.updated_at, u.username
+FROM users AS u
+2025-09-05 15:30:22.384 +05:30 [INF] Setting HTTP status code 200.
+2025-09-05 15:30:22.386 +05:30 [INF] Writing value of type 'List`1' as Json.
+2025-09-05 15:30:22.390 +05:30 [INF] Executed endpoint 'HTTP: GET /api/users/'
+2025-09-05 15:30:22.390 +05:30 [INF] HTTP GET /api/users responded 200 in 40.4021 ms
+2025-09-05 15:30:22.392 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/users - 200 null application/json; charset=utf-8 47.068ms
+2025-09-05 15:30:23.146 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/users - null null
+2025-09-05 15:30:23.147 +05:30 [INF] Executing endpoint 'HTTP: GET /api/users/'
+2025-09-05 15:30:23.157 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u.id, u.created_at, u.email, u.first_name, u.is_active, u.last_name, u.password_hash, u.password_salt, u.phone, u.profile_picture_url, u.role, u.updated_at, u.username
+FROM users AS u
+2025-09-05 15:30:23.157 +05:30 [INF] Setting HTTP status code 200.
+2025-09-05 15:30:23.158 +05:30 [INF] Writing value of type 'List`1' as Json.
+2025-09-05 15:30:23.158 +05:30 [INF] Executed endpoint 'HTTP: GET /api/users/'
+2025-09-05 15:30:23.158 +05:30 [INF] HTTP GET /api/users responded 200 in 11.8306 ms
+2025-09-05 15:30:23.159 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/users - 200 null application/json; charset=utf-8 12.7248ms
+2025-09-05 15:30:24.799 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/users - null null
+2025-09-05 15:30:24.800 +05:30 [INF] Executing endpoint 'HTTP: GET /api/users/'
+2025-09-05 15:30:24.806 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u.id, u.created_at, u.email, u.first_name, u.is_active, u.last_name, u.password_hash, u.password_salt, u.phone, u.profile_picture_url, u.role, u.updated_at, u.username
+FROM users AS u
+2025-09-05 15:30:24.808 +05:30 [INF] Setting HTTP status code 200.
+2025-09-05 15:30:24.808 +05:30 [INF] Writing value of type 'List`1' as Json.
+2025-09-05 15:30:24.809 +05:30 [INF] Executed endpoint 'HTTP: GET /api/users/'
+2025-09-05 15:30:24.809 +05:30 [INF] HTTP GET /api/users responded 200 in 8.9093 ms
+2025-09-05 15:30:24.810 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/users - 200 null application/json; charset=utf-8 10.3567ms
+2025-09-05 15:30:25.532 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/users - null null
+2025-09-05 15:30:25.538 +05:30 [INF] Executing endpoint 'HTTP: GET /api/users/'
+2025-09-05 15:30:25.551 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u.id, u.created_at, u.email, u.first_name, u.is_active, u.last_name, u.password_hash, u.password_salt, u.phone, u.profile_picture_url, u.role, u.updated_at, u.username
+FROM users AS u
+2025-09-05 15:30:25.553 +05:30 [INF] Setting HTTP status code 200.
+2025-09-05 15:30:25.553 +05:30 [INF] Writing value of type 'List`1' as Json.
+2025-09-05 15:30:25.554 +05:30 [INF] Executed endpoint 'HTTP: GET /api/users/'
+2025-09-05 15:30:25.554 +05:30 [INF] HTTP GET /api/users responded 200 in 16.1514 ms
+2025-09-05 15:30:25.554 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/users - 200 null application/json; charset=utf-8 21.9089ms
+2025-09-05 15:30:26.118 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/users - null null
+2025-09-05 15:30:26.119 +05:30 [INF] Executing endpoint 'HTTP: GET /api/users/'
+2025-09-05 15:30:26.125 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u.id, u.created_at, u.email, u.first_name, u.is_active, u.last_name, u.password_hash, u.password_salt, u.phone, u.profile_picture_url, u.role, u.updated_at, u.username
+FROM users AS u
+2025-09-05 15:30:26.127 +05:30 [INF] Setting HTTP status code 200.
+2025-09-05 15:30:26.127 +05:30 [INF] Writing value of type 'List`1' as Json.
+2025-09-05 15:30:26.127 +05:30 [INF] Executed endpoint 'HTTP: GET /api/users/'
+2025-09-05 15:30:26.128 +05:30 [INF] HTTP GET /api/users responded 200 in 8.8442 ms
+2025-09-05 15:30:26.128 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/users - 200 null application/json; charset=utf-8 9.5238ms
+2025-09-05 15:30:26.661 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/users - null null
+2025-09-05 15:30:26.662 +05:30 [INF] Executing endpoint 'HTTP: GET /api/users/'
+2025-09-05 15:30:26.664 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u.id, u.created_at, u.email, u.first_name, u.is_active, u.last_name, u.password_hash, u.password_salt, u.phone, u.profile_picture_url, u.role, u.updated_at, u.username
+FROM users AS u
+2025-09-05 15:30:26.664 +05:30 [INF] Setting HTTP status code 200.
+2025-09-05 15:30:26.664 +05:30 [INF] Writing value of type 'List`1' as Json.
+2025-09-05 15:30:26.664 +05:30 [INF] Executed endpoint 'HTTP: GET /api/users/'
+2025-09-05 15:30:26.664 +05:30 [INF] HTTP GET /api/users responded 200 in 3.1636 ms
+2025-09-05 15:30:26.665 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/users - 200 null application/json; charset=utf-8 3.8281ms
+2025-09-05 17:12:14.205 +05:30 [INF] Application is shutting down...
+2025-09-05 17:26:53.889 +05:30 [INF] User profile is available. Using '/Users/tbalamurugan/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-09-05 17:26:53.941 +05:30 [INF] Now listening on: http://localhost:5100
+2025-09-05 17:26:53.941 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-05 17:26:53.942 +05:30 [INF] Hosting environment: Development
+2025-09-05 17:26:53.942 +05:30 [INF] Content root path: /Users/tbalamurugan/Projects/fanda-org/fanda-ics/src/Fanda.ICS.Api
+2025-09-05 17:28:06.338 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/scalar/ - null null
+2025-09-05 17:28:06.447 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-09-05 17:28:06.476 +05:30 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2025-09-05 17:28:06.517 +05:30 [INF] Write content with HTTP Response ContentType of text/html
+2025-09-05 17:28:06.519 +05:30 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2025-09-05 17:28:06.520 +05:30 [INF] HTTP GET /scalar/ responded 200 in 71.8150 ms
+2025-09-05 17:28:06.528 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/scalar/ - 200 null text/html 191.9123ms
+2025-09-05 17:28:06.535 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/scalar/scalar.aspnetcore.js - null null
+2025-09-05 17:28:06.535 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/scalar/scalar.js - null null
+2025-09-05 17:28:06.535 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-05 17:28:06.537 +05:30 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2025-09-05 17:28:06.537 +05:30 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2025-09-05 17:28:06.538 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/_framework/aspnetcore-browser-refresh.js - 200 16091 application/javascript; charset=utf-8 2.2268ms
+2025-09-05 17:28:06.544 +05:30 [INF] Setting HTTP status code 304.
+2025-09-05 17:28:06.544 +05:30 [INF] Setting HTTP status code 304.
+2025-09-05 17:28:06.545 +05:30 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2025-09-05 17:28:06.545 +05:30 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2025-09-05 17:28:06.545 +05:30 [INF] HTTP GET /scalar/scalar.js responded 304 in 8.3963 ms
+2025-09-05 17:28:06.545 +05:30 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 304 in 8.3775 ms
+2025-09-05 17:28:06.545 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/scalar/scalar.aspnetcore.js - 304 null null 9.5876ms
+2025-09-05 17:28:06.545 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/scalar/scalar.js - 304 null null 9.583ms
+2025-09-05 17:28:07.584 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/openapi/v1.json - null null
+2025-09-05 17:28:07.588 +05:30 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2025-09-05 17:28:07.601 +05:30 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-09-05 17:28:07.674 +05:30 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2025-09-05 17:28:07.675 +05:30 [INF] HTTP GET /openapi/v1.json responded 200 in 89.8848 ms
+2025-09-05 17:28:07.675 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/openapi/v1.json - null null
+2025-09-05 17:28:07.675 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/openapi/v1.json - 200 null application/json;charset=utf-8 91.2122ms
+2025-09-05 17:28:07.675 +05:30 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2025-09-05 17:28:07.676 +05:30 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2025-09-05 17:28:07.676 +05:30 [INF] HTTP GET /openapi/v1.json responded 200 in 1.3718 ms
+2025-09-05 17:28:07.677 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/openapi/v1.json - 200 null application/json;charset=utf-8 1.8717ms
+2025-09-05 17:39:20.174 +05:30 [INF] Application is shutting down...

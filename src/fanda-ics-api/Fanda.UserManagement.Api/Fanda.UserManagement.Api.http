@@ -1,0 +1,228 @@
+### Fanda User Management API v2.0 - Clean Identity Implementation
+### Base URLs:
+### HTTP: http://localhost:5174
+### HTTPS: https://localhost:7298
+
+### Variables (update these after getting tokens)
+@baseUrl = http://localhost:5000
+@accessToken = YOUR_ACCESS_TOKEN_HERE
+@refreshToken = YOUR_REFRESH_TOKEN_HERE
+@userId = YOUR_USER_ID_HERE
+
+### ========================================
+### API INFORMATION
+### ========================================
+
+### Health Check
+GET {{baseUrl}}/
+
+### API Information
+GET {{baseUrl}}/api
+
+### ========================================
+### AUTHENTICATION ENDPOINTS
+### ========================================
+
+### 1. Register a new user
+POST {{baseUrl}}/api/auth/register
+Content-Type: application/json
+
+{
+  "email": "software.balu@gmail.com",
+  "password": "SecurePass123!",
+  "confirmPassword": "SecurePass123!",
+  "firstName": "Bala",
+  "lastName": "T",
+  "phoneNumber": "+1234567890"
+}
+
+### 2. Login (copy accessToken and refreshToken from response)
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "john.doe@example.com",
+  "password": "SecurePass123!",
+  "rememberMe": true
+}
+
+### 3. Login as Admin (default admin user)
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@fanda.com",
+  "password": "Admin@123",
+  "rememberMe": false
+}
+
+### 4. Refresh Access Token
+POST {{baseUrl}}/api/auth/refresh-token
+Content-Type: application/json
+
+{
+  "refreshToken": "{{refreshToken}}"
+}
+
+### 5. Forgot Password
+POST {{baseUrl}}/api/auth/forgot-password
+Content-Type: application/json
+
+{
+  "email": "john.doe@example.com"
+}
+
+### 6. Reset Password
+POST {{baseUrl}}/api/auth/reset-password
+Content-Type: application/json
+
+{
+  "email": "john.doe@example.com",
+  "token": "RESET_TOKEN_FROM_EMAIL",
+  "newPassword": "NewSecurePass123!",
+  "confirmPassword": "NewSecurePass123!"
+}
+
+### 7. Change Password (Protected)
+POST {{baseUrl}}/api/auth/change-password
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
+
+{
+  "currentPassword": "SecurePass123!",
+  "newPassword": "NewSecurePass123!",
+  "confirmPassword": "NewSecurePass123!"
+}
+
+### 8. Logout (Protected)
+POST {{baseUrl}}/api/auth/logout
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
+
+{
+  "refreshToken": "{{refreshToken}}"
+}
+
+### 9. Revoke Refresh Token (Protected)
+POST {{baseUrl}}/api/auth/revoke-token
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
+
+{
+  "refreshToken": "{{refreshToken}}"
+}
+
+### ========================================
+### USER MANAGEMENT ENDPOINTS
+### ========================================
+
+### 10. Get Current User (Protected)
+GET {{baseUrl}}/api/users/me
+Authorization: Bearer {{accessToken}}
+
+### 11. Get All Users (Protected, Paginated)
+GET {{baseUrl}}/api/users?page=1&pageSize=10&orderBy=CreatedAt&orderDescending=true
+Authorization: Bearer {{accessToken}}
+
+### 12. Get Users with Search and Filters
+GET {{baseUrl}}/api/users?page=1&pageSize=5&search=john&isActive=true&role=User
+Authorization: Bearer {{accessToken}}
+
+### 13. Get User by ID (Protected)
+GET {{baseUrl}}/api/users/{{userId}}
+Authorization: Bearer {{accessToken}}
+
+### 14. Create User (Admin/Manager only)
+POST {{baseUrl}}/api/users
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
+
+{
+  "email": "jane.smith@example.com",
+  "password": "UserPass123!",
+  "firstName": "Jane",
+  "lastName": "Smith",
+  "phoneNumber": "+1987654321",
+  "profilePictureUrl": "https://example.com/avatar.jpg",
+  "isActive": true,
+  "roleNames": ["Staff", "User"]
+}
+
+### 15. Update User (Admin/Manager only)
+PUT {{baseUrl}}/api/users/{{userId}}
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
+
+{
+  "firstName": "John Updated",
+  "lastName": "Doe Updated",
+  "phoneNumber": "+1555000123",
+  "profilePictureUrl": "https://example.com/new-avatar.jpg",
+  "isActive": true,
+  "roleNames": ["Manager", "User"]
+}
+
+### 16. Delete User (Admin only)
+DELETE {{baseUrl}}/api/users/{{userId}}
+Authorization: Bearer {{accessToken}}
+
+### ========================================
+### ROLE MANAGEMENT ENDPOINTS
+### ========================================
+
+### 17. Get User Roles (Protected)
+GET {{baseUrl}}/api/users/{{userId}}/roles
+Authorization: Bearer {{accessToken}}
+
+### 18. Assign Role to User (Admin/Manager only)
+POST {{baseUrl}}/api/users/{{userId}}/roles/Manager
+Authorization: Bearer {{accessToken}}
+
+### 19. Remove Role from User (Admin/Manager only)
+DELETE {{baseUrl}}/api/users/{{userId}}/roles/Staff
+Authorization: Bearer {{accessToken}}
+
+### ========================================
+### ERROR TESTING
+### ========================================
+
+### 20. Test Invalid Login
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "invalid@example.com",
+  "password": "WrongPassword",
+  "rememberMe": false
+}
+
+### 21. Test Invalid Registration (duplicate email)
+POST {{baseUrl}}/api/auth/register
+Content-Type: application/json
+
+{
+  "email": "john.doe@example.com",
+  "password": "Test123!",
+  "confirmPassword": "Test123!",
+  "firstName": "Duplicate",
+  "lastName": "User"
+}
+
+### 22. Test Unauthorized Access (no token)
+GET {{baseUrl}}/api/users
+
+### 23. Test Invalid Token
+GET {{baseUrl}}/api/users/me
+Authorization: Bearer INVALID_TOKEN_HERE
+
+### ========================================
+### NOTES
+### ========================================
+### 1. Update @accessToken and @refreshToken variables after successful login
+### 2. Update @userId with actual user ID from user responses
+### 3. Admin user credentials: admin@fanda.com / Admin@123
+### 4. Default roles: Admin, Manager, Supervisor, Staff, Member, User, Guest
+### 5. Access token expires in 60 minutes (configurable)
+### 6. Refresh token expires in 7 days (configurable)
+### 7. Use HTTPS URL for production: https://localhost:7298
+### 8. This version uses pure ASP.NET Core Identity with clean architecture

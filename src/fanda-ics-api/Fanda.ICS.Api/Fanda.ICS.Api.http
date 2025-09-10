@@ -1,0 +1,28 @@
+@ics_host = http://localhost:5100
+@auth_host = http://localhost:5000
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNWVkYTlkYi0wNmE2LTQ3NmEtYmExOS02MTI5N2Q4MjA0ZjQiLCJlbWFpbCI6WyJhZG1pbkBmYW5kYS5jb20iLCJhZG1pbkBmYW5kYS5jb20iXSwidW5pcXVlX25hbWUiOiJTeXN0ZW0gQWRtaW5pc3RyYXRvciIsImdpdmVuX25hbWUiOiJTeXN0ZW0iLCJmYW1pbHlfbmFtZSI6IkFkbWluaXN0cmF0b3IiLCJ1c2VyX2lkIjoiZTVlZGE5ZGItMDZhNi00NzZhLWJhMTktNjEyOTdkODIwNGY0IiwiZmlyc3RfbmFtZSI6IlN5c3RlbSIsImxhc3RfbmFtZSI6IkFkbWluaXN0cmF0b3IiLCJyb2xlIjpbIkFkbWluIiwiQWRtaW4iXSwibmJmIjoxNzU3NDg4MjY4LCJleHAiOjE3NTc0OTE4NjgsImlhdCI6MTc1NzQ4ODI2OCwiaXNzIjoiRmFuZGEuVXNlck1hbmFnZW1lbnQuQXBpIiwiYXVkIjoiRmFuZGEuVXNlck1hbmFnZW1lbnQuQXBpIn0.jlwAZylIxJPTmhhTvFtWV8VGbLqj21yblr1IUUIivyc
+@refreshToken = dnZvWgFCQfnYn33dl0wddf9HjrTfuP+pd43Gp3kf7/Qh5/iAU7mwQAeLFQzLyfev1mQjp51DPnfjKh/XSwhLsg==
+
+### ========================================
+### API INFORMATION
+
+
+### Login
+POST {{auth_host}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@fanda.com",
+  "password": "Admin@123",
+  "rememberMe": false
+}
+
+### Health Check
+
+GET {{ics_host}}
+Accept: application/json
+
+###
+GET {{ics_host}}/api
+Accept: application/json
+Authorization: Bearer {{token}}

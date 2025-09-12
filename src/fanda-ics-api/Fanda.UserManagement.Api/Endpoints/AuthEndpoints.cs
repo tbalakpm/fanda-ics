@@ -113,7 +113,7 @@ public static class AuthEndpoints
         [FromServices] IAuthService authService)
     {
         var result = await authService.ValidateTokenAsync(request);
-        return result ? Results.Ok() : Results.BadRequest();
+        return result.Success ? Results.Ok(result) : Results.BadRequest(result);
     }
 
     private static async Task<IResult> ChangePassword(

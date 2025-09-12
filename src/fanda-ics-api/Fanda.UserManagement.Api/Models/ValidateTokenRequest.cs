@@ -1,4 +1,4 @@
-namespace Fanda.UserManagement.Api.Endpoints;
+namespace Fanda.UserManagement.Api.Models;
 
 public class ValidateTokenRequest
 {

@@ -15,7 +15,7 @@ public interface IAuthService
     public Task<ApiResponse<object>> ResetPasswordAsync(ResetPasswordRequest request);
     public Task<ApiResponse<object>> ChangePasswordAsync(Guid userId, ChangePasswordRequest request);
     public Task<ApiResponse<object>> LogoutAsync(string refreshToken);
-    public Task<bool> ValidateTokenAsync(ValidateTokenRequest request);
+    public Task<ApiResponse<object>> ValidateTokenAsync(ValidateTokenRequest request);
 }
 
 public class AuthService : IAuthService
@@ -64,7 +64,7 @@ public class AuthService : IAuthService
 
         // Update last login
         user.LastLoginAt = DateTime.UtcNow;
-        user.UpdatedAt = DateTime.UtcNow;
+        // user.UpdatedAt = DateTime.UtcNow;
         await _userManager.UpdateAsync(user);
 
         return await GenerateAuthResponseAsync(user);
@@ -187,6 +187,12 @@ public class AuthService : IAuthService
         return ApiResponse.Success("Logged out successfully");
     }
 
+    public Task<ApiResponse<object>> ValidateTokenAsync(ValidateTokenRequest request)
+    {
+        var result = _tokenService.ValidateToken(request.Token);
+        return Task.FromResult(ApiResponse.Success("Token validation successful"));
+    }
+
     private async Task<ApiResponse<AuthResponse>> GenerateAuthResponseAsync(ApplicationUser user)
     {
         var roles = await _userManager.GetRolesAsync(user);
@@ -233,10 +239,5 @@ public class AuthService : IAuthService
         };
 
         return ApiResponse<AuthResponse>.SuccessResult(authResponse, "Authentication successful");
-    }
-
-    Task<bool> IAuthService.ValidateTokenAsync(ValidateTokenRequest request)
-    {
-        return Task.FromResult(_tokenService.ValidateToken(request.Token));
     }
 }

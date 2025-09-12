@@ -1,5 +1,6 @@
 using System.Text;
 
+using Fanda.UserManagement.Api;
 using Fanda.UserManagement.Api.Authentication;
 using Fanda.UserManagement.Api.Data;
 using Fanda.UserManagement.Api.Endpoints;
@@ -232,14 +233,14 @@ try
     app.MapGet("/", () => new
     {
         service = "Fanda User Management API",
-        status = "Running",
         version = "2.0.0",
+        status = "Running",
         timestamp = DateTime.UtcNow,
         architecture = "Clean Architecture with ASP.NET Core Identity"
     })
-        .WithName("Root")
-        .WithSummary("API health check")
-        .WithOpenApi();
+    .WithName("RootInfo")
+    .WithSummary("Root information")
+    .WithOpenApi();
 
     app.MapGet("/api", () => new
     {
@@ -254,9 +255,9 @@ try
             documentation = "/scalar/v1"
         }
     })
-        .WithName("ApiInfo")
-        .WithSummary("API information")
-        .WithOpenApi();
+    .WithName("ApiInfo")
+    .WithSummary("API information")
+    .WithOpenApi();
 
     Log.Information("🚀 Fanda User Management API starting up...");
     Log.Information("📖 API Documentation available at: /scalar/v1");
